@@ -14,10 +14,8 @@ public class WordCounterService {
         HashMap wordsWithOccurrence = new HashMap<String , Integer> ();
         List<String> splitedSentence = Arrays.asList ( input.getSentence ( ).toUpperCase ().split ( " " ) );
         for (String word : splitedSentence) {
-            if(wordsWithOccurrence.get (word) == null)
-                wordsWithOccurrence.put ( word,1 );
-            else
-                wordsWithOccurrence.put( word, (Integer)wordsWithOccurrence.get ( word ) + 1);
+            wordsWithOccurrence.putIfAbsent ( word,1 );
+            wordsWithOccurrence.computeIfPresent ( word, (key, val) -> (Integer)val + 1);
         }
         Output output =  new Output ();
         output.setWordsWithOccurrence ( wordsWithOccurrence );

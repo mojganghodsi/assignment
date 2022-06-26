@@ -6,9 +6,9 @@
 ![build](https://img.shields.io/github/workflow/status/mojganghodsi/assignment/ci)
 -->
 # Assignment
-Word Counter, Concurrent hashmap, Deadlock as are described in the sent document.
+Word Counter, Concurrent hashmap, Deadlock as are described in the document.
 
-Challenge 3 will be commited in some hours.
+About challenges: There are many ways to solve them, The implemented solutions are what I got to in this limited time, so we can discuss more efficient way later.
 
 ## Table of Contents
 

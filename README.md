@@ -5,8 +5,8 @@
 <!--
 ![build](https://img.shields.io/github/workflow/status/mojganghodsi/assignment/ci)
 -->
-# assignment
-
+# Assignment
+Word Counter, Concurrent hashmap, Deadlock as are described in the sent document.
 
 ## Table of Contents
 

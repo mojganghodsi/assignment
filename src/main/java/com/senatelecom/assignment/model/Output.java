@@ -1,16 +1,17 @@
 package com.senatelecom.assignment.model;
 
+import com.senatelecom.assignment.lib.CustomizedConcurrentHashmap;
+
 import java.io.Serializable;
-import java.util.HashMap;
+import java.util.Map;
 
 public class Output implements Serializable {
-    HashMap<String , Integer> wordsWithOccurrence;
-
-    public HashMap<String, Integer> getWordsWithOccurrence ( ) {
+    CustomizedConcurrentHashmap<String , Integer> wordsWithOccurrence;
+    public Map<String, Integer> getWordsWithOccurrence ( ) {
         return wordsWithOccurrence;
     }
 
-    public void setWordsWithOccurrence ( HashMap<String, Integer> wordsWithOccurrence ) {
+    public void setWordsWithOccurrence ( CustomizedConcurrentHashmap<String, Integer> wordsWithOccurrence ) {
         this.wordsWithOccurrence = wordsWithOccurrence;
     }
 
@@ -27,7 +28,7 @@ public class Output implements Serializable {
             return false;
         }
         Output output = (Output) o;
-        return output.getWordsWithOccurrence ().equals ( ((Output) o).getWordsWithOccurrence () );
+        return output.getWordsWithOccurrence ().equals ( this.getWordsWithOccurrence () );
     }
 
 }

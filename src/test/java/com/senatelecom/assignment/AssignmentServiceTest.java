@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.InputStream;
+import java.util.HashMap;
 
 /**
  * @author mojgan
@@ -32,9 +33,20 @@ public class AssignmentServiceTest {
 
     @Test
     void ChargingProcessTest() throws Exception{
-/*        Input input = new Input ();
+        Input input = new Input ();
+        input.setSentence ("This is a test I designed to test a candidate.");
         Output output = new Output ();
-        Assert.assertEquals(wordCounterService.count (input),output);*/
+        HashMap wordsWithOccurrence = new HashMap<String , Integer> ();
+        wordsWithOccurrence.put("This",1);
+        wordsWithOccurrence.put("is",1);
+        wordsWithOccurrence.put("a",2);
+        wordsWithOccurrence.put("test",2);
+        wordsWithOccurrence.put("I",1);
+        wordsWithOccurrence.put("to",1);
+        wordsWithOccurrence.put("designed",1);
+        wordsWithOccurrence.put("candidate",1);
+        output.setWordsWithOccurrence (wordsWithOccurrence);
+        Assert.assertEquals(wordCounterService.count (input),output);
     }
 
 }

@@ -12,7 +12,7 @@ import java.util.List;
 public class WordCounterService {
     public Output count( Input input){
         HashMap wordsWithOccurrence = new HashMap<String , Integer> ();
-        List<String> splitedSentence = Arrays.asList ( input.getSentence ( ).split ( " " ) );
+        List<String> splitedSentence = Arrays.asList ( input.getSentence ( ).toUpperCase ().split ( " " ) );
         for (String word : splitedSentence) {
             if(wordsWithOccurrence.get (word) == null)
                 wordsWithOccurrence.put ( word,1 );

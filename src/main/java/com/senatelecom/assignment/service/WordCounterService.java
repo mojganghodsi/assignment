@@ -6,9 +6,7 @@ import com.senatelecom.assignment.model.Output;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class WordCounterService {

@@ -8,6 +8,8 @@
 # Assignment
 Word Counter, Concurrent hashmap, Deadlock as are described in the sent document.
 
+Challenge 3 will be commited in some hours.
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)

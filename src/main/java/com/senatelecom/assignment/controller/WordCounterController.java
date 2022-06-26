@@ -34,6 +34,7 @@ public class WordCounterController {
     @RequestMapping(value = "/count", method = RequestMethod.POST)
     public ResponseEntity count( @RequestBody Input input) {
         Output output =  wordCounterService.count(input);
-        return ResponseEntity.status( HttpStatus.OK).body(output);
+        //return ResponseEntity.status( HttpStatus.OK).body(output);
+        return ResponseHandler.generateResponse ("Counting successfully finished!",HttpStatus.OK,output);
     }
 }
